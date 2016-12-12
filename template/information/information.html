@@ -1,0 +1,29 @@
+<ion-view id="information" >
+    <ion-nav-title>
+        <div class="row">
+            <div class="col-20"><a>热点</a></div>
+            <div class="col-20"><a class="ac" ui-sref="tabs.information">订阅</a></div>
+            <div class="col-20"><a>直播</a></div>
+        </div>
+    </ion-nav-title>
+    <ion-content>
+        <!--轮播图片-->
+        <ion-slide-box does-continue="true" auto-play="true" slide-interval="2500">
+            <ion-slide ng-repeat="m in lunbodata">
+                <img ng-src="images/{{m.imgsrc}}">
+            </ion-slide>
+        </ion-slide-box>
+        <!--logo分块-->
+        <ion-list show-reorder="config.showReorder" show-delete="config.showDelete">
+            <ion-item class=""
+                      ng-repeat="m in logodata"
+                      ><img ng-src="images/{{m.imgsrc}}">
+                <ion-reorder-button class="button button-icon ion-android-menu "
+                                    ></ion-reorder-button>
+                <ion-delete-button class="button button-icon ion-minus-circled delBtn"
+                                   ng-click="remove(product)"></ion-delete-button>
+            </ion-item>
+            <a class="item"><i class="button button-icon ion-plus"></i></a>
+        </ion-list>
+    </ion-content>
+</ion-view>

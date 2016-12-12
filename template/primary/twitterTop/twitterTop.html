@@ -1,0 +1,15 @@
+<ion-view view-title="推送资讯">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" ui-sref="tabs.primary"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="m in data ">
+                <span class="item-note">{{m.time}}</span>
+                <h3 class="positive">{{m.title}}</h3>
+                <p>{{m.txt}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

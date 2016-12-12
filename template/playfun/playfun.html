@@ -1,0 +1,20 @@
+<ion-view view-title="玩乐"  id="playfun">
+    <ion-nav-title class="item-button-left item-button-right" >
+        <!--ion funnel-->
+        <button class="button button-clear">玩乐</button>
+        <button class="button button-clear">
+            重庆<i class="icon ion-funnel" style="font-size:10px;"></i>
+        </button>
+    </ion-nav-title>
+    <ion-content>
+        <div class="row">
+            <div class="col" ng-repeat="m in playfunlogo"><img ng-src="images/{{m.imgsrc}}"></div>
+        </div>
+        <div class="card" ng-repeat="m in playfunimglist">
+            <a class="item item-image">
+                <img src="images/{{m.imgsrc}}" >
+                <div class="marsk"><span>{{m.txt}}</span></div>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

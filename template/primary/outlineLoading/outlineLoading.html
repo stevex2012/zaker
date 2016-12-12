@@ -1,0 +1,43 @@
+<ion-view view-title="离线下载" id="outlineLoading">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" ui-sref="tabs.primary"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="padding">
+            <button class=" button button-block button-assertive">离线下载</button>
+        </div>
+        <ion-list>
+            <ion-item>
+                定时自动离线下载时间
+            </ion-item>
+            <ion-item class="item-toggle">
+                非WIFI时自动离线下不下载图片
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" checked>
+                    <div class="track">
+                        <div class="handle "></div>
+                    </div>
+                </label>
+            </ion-item>
+            <ion-item class="item-divider item-borderless"></ion-item>
+            <ion-item class="item-toggle item-borderless">
+                所有频道
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" ng-click="checkallChannel(channelNum)" ng-checked="channelNum==channel.length?true:false">
+                    <div class="track">
+                        <div class="handle "></div>
+                    </div>
+                </label>
+            </ion-item>
+            <ion-item class="item-toggle " ng-repeat="m in channel track by $index">
+                {{m.txt}}
+                <label class="toggle toggle-assertive">
+                    <input type="checkbox" ng-checked="m.check" ng-click="chooseChannel(m)">
+                    <div class="track">
+                        <div class="handle "></div>
+                    </div>
+                </label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

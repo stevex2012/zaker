@@ -1,0 +1,99 @@
+<ion-view view-title="更多设置" id="moresettings"  >
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" ui-sref="tabs.primary"></button>
+    </ion-nav-buttons>
+    <ion-content>
+      <ion-list type="list-card">
+          <ion-item >
+              <h3>选择字体</h3><span>系统默认</span>
+          </ion-item>
+          <ion-item class="item-divider item-borderless"></ion-item>
+          <ion-item class="item-borderless item-toggle">
+              <h3 >夜间模式</h3><span>适合光线较弱的阅读环境</span>
+              <label class="toggle toggle-assertive" ng-click="changeBG()">
+                  <input type="checkbox">
+                  <div class="track">
+                      <div class="handle "></div>
+                  </div>
+              </label>
+          </ion-item>
+          <ion-item >
+              <b class="item-note">重庆</b>
+              <h3 >城市设置</h3>
+          </ion-item>
+          <ion-item >
+              <b class="item-note">66.99MB</b>
+              <h3 >清除缓存</h3>
+          </ion-item>
+          <ion-item class="item-toggle">
+              <h3 >下拉返回</h3><span>关闭后下拉无法返回上一页</span>
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox">
+                  <div class="track">
+                      <div class="handle "></div>
+                  </div>
+              </label>
+          </ion-item>
+          <ion-item >
+              <h3>分享设置</h3><span>管理微博和笔记等第三方帐号</span>
+          </ion-item>
+          <ion-item class="item-toggle">
+              <h3 >省流量模式</h3><span>非WIFI下使用流量最小的照片</span>
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox" checked>
+                  <div class="track">
+                      <div class="handle "></div>
+                  </div>
+              </label>
+          </ion-item>
+          <ion-item >
+              <h3>要闻推送</h3><span>实时推送重大新闻</span>
+          </ion-item>
+          <ion-item class="item-toggle">
+              <h3 >推送声音</h3><span>收到推送时声音提醒</span>
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox">
+                  <div class="track">
+                      <div class="handle "></div>
+                  </div>
+              </label>
+          </ion-item>
+          <ion-item class="item-toggle">
+              <h3 >双击关闭文章</h3><span>当阅读资讯时双击亦可退出阅读</span>
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox">
+                  <div class="track">
+                      <div class="handle "></div>
+                  </div>
+              </label>
+          </ion-item>
+          <ion-item class="item-toggle lastitem">
+              <h3 >多彩图标</h3><span>订阅频道图标彩色显示</span>
+              <label class="toggle toggle-assertive">
+                  <input type="checkbox" checked>
+                  <div class="track">
+                      <div class="handle "></div>
+                  </div>
+              </label>
+          </ion-item>
+          <ion-item class="item-divider item-borderless"></ion-item>
+          <ion-item class=" item-borderless">
+              <h3>用户反馈</h3>
+          </ion-item>
+          <ion-item>
+              <h3>推荐好友</h3>
+          </ion-item>
+          <ion-item >
+              <b class="item-note">当前版本为7.0.2</b>
+              <h3>检测更新</h3>
+          </ion-item>
+          <ion-item>
+              <h3>给我们好评</h3>
+          </ion-item>
+          <ion-item>
+              <h3>关于我们</h3>
+          </ion-item>
+          <ion-item class="item-divider item-borderless"></ion-item>
+      </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,78 @@
+<ion-view view-title="社区" id="areas">
+    <div class="tabs-striped tabs-top  tabs-color-assertive bar-subheader">
+        <div class="tabs">
+            <a class="tab-item" ng-class="tab1.state==true? 'active':''" href="javascript:;" ng-click="changetab(tab1)">话题</a>
+            <a class="tab-item " ng-class="tab2.state==true? 'active':''" href="javascript:;"
+               ng-click="changetab(tab2)">精选</a>
+            <a class="tab-item" ng-class="tab3.state==true? 'active':''" href="javascript:;" ng-click="changetab(tab3)">好友圈</a>
+        </div>
+    </div>
+    <ion-content class="has-tabs">
+        <!--下拉刷新-->
+        <ion-refresher pulling-text="刷新" pulling-icon="ion-load-a" on-pulling="doRefresh()"
+                       refreshing-icon="ion-load-b">
+        </ion-refresher>
+        <div class="wrap">
+            <!--话题-->
+            <div class="huati" ng-show="tab1.state">
+                <div class="button button-block"><i class="icon ion-android-person"></i> 快来登录玩转社区吧</div>
+                <ion-list>
+                    <ion-item class="item-divider item-borderless">推荐话题</ion-item>
+                    <ion-item class="item-avatar" ng-repeat="m in  huatidata">
+                        <img ng-src="images/{{m.imgsrc}}">
+                        <h3>{{m.title}}</h3>
+                        <p>{{m.desc}}</p>
+                        <span class="badge"><button class="button button-icon ion-plus"></button></span>
+                    </ion-item>
+                </ion-list>
+
+            </div>
+            <!--精选-->
+            <div class="jinxuan" ng-show="tab2.state">
+                <ion-list ng-repeat="m in jinxuandata">
+                    <ion-item class="item-avatar item-borderless">
+                        <img src="images/{{m.headimg}}">
+                        <span class="item-note">{{m.note}}</span>
+                        <h3>{{m.username}}</h3>
+                        <p>{{m.time}}</p>
+                    </ion-item>
+                    <ion-item class="item-borderless txt">
+                        {{m.txt}}
+                    </ion-item>
+                    <ion-item class="item-image item-borderless">
+                        <img src="images/{{m.img}}">
+                    </ion-item>
+                    <ion-item class="row">
+                        <a class="col "><i class="icon ion-ios-eye-outline"></i> {{m.checknum}}</a>
+                        <a class="col"><i class="icon ion-chatbox-working"></i> {{m.chatnum}}</a>
+                        <a class="col"><i class="icon ion-thumbsup"></i> {{m.thumnum}}</a>
+                    </ion-item>
+                </ion-list>
+            </div>
+            <!--好友圈-->
+            <div class="haoyouquan" ng-show="tab3.state">
+                <div class="button button-block"><i class="icon ion-android-person"></i> 登录查看好友动态</div>
+                <ion-list ng-repeat="m in haoyouquandata">
+                    <ion-item class="item-avatar item-button-right item-borderless">
+                        <img ng-src="images/{{m.headimg}}">
+                        <h3>{{m.username}}</h3>
+                        <p>{{m.time}}</p>
+                        <button class="button button-outline button-dark">+ 关注</button>
+                    </ion-item>
+                    <ion-item class="item-borderless">
+                        <p>{{m.txt}}</p>
+                    </ion-item>
+                    <ion-item class="item-thumbnail-left item-borderless">
+                        <img ng-src="images/{{m.img}}" >
+                    </ion-item>
+                    <ion-item class="row item-borderless">
+                        <a class="col col-offset-80 " style="color:#ddd;"><i class="icon ion-android-textsms"></i></a>
+                        <a class="col" style="color:#ddd;"><i class="icon ion-thumbsup"></i></a>
+                    </ion-item>
+                    <ion-item class="item-divider item-borderless"></ion-item>
+                </ion-list>
+            </div>
+            <ion-infinite-scroll on-infinite="fn()" immediate-check="false" ng-if="total<3"></ion-infinite-scroll>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,59 @@
+<ion-view view-title="我的" id="primary">
+    <ion-content style="background:#f3f3f3;">
+        <ion-list>
+            <a href="" class="item item-icon-left denglu" ng-click="openModal()">
+                <i class="icon ion-person balanced"></i><span>登录ZAKER体验更多功能</span>
+            </a>
+            <a href="" class="item">
+                消息中心
+            </a>
+            <a href="" class="item" ui-sref="twitterTop">
+                推送资讯
+            </a>
+            <a href="" class="item">
+                ZAKER俱乐部
+            </a>
+            <a href="" class="item">
+                积分商城
+            </a>
+            <a href="" class="item">
+                我的收藏
+            </a>
+            <div class="item item-borderless tiao"></div>
+            <a href="" class="item item-borderless" ui-sref="outlineLoading">
+                离线下载
+            </a>
+            <a href="" class="item lastitem" ui-sref="moresettings">
+                更多设置
+            </a>
+        </ion-list>
+
+    </ion-content>
+    <!--模版页面-->
+    <script id="primary_modal.html" type="text/ng-template">
+        <ion-modal-view style="width:100%;">
+            <ion-header-bar class="bar bar-header bar-assertive">
+                <button class="button button-icon ion-close" ng-click="closeModal()"></button>
+            </ion-header-bar>
+            <ion-content class="padding " style="padding:0;">
+                <div class="brand" style="text-align: center;height:80%;color:#fff;background:#fb4747;">
+                    <img src="images/dengluimg_03.jpg" style="vertical-align: middle">
+                    <h3 style="color:#fff;">登录即可</h3>
+                    <p>赚取积分大礼</p>
+                </div>
+                <div class="row">
+                    <a  class="col" style="text-align: center">
+                        <button class="button button-icon ion-social-twitter" style="font-size:30px;"></button>
+                    </a>
+                    <a  class="col" style="text-align: center">
+                        <button class="button button-icon ion-social-facebook" style="font-size:30px;"></button>
+                    </a>
+                </div>
+                <div class="row">
+                    <a class="col" style="text-align: center;" >ZAKER帐号登录</a>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-view>
+
