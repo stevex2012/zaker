@@ -1,0 +1,56 @@
+
+/*tabs 的显示后隐藏 class*/
+/*home 样式*/
+#home .slider{width:100%;height:100%;}
+#home .slider-slide img{width:100%;height:100%;}
+/*#home .slider .img_box{height:100%;}*/
+#home .slider .logoimg{width:168px;height:168px;}
+#home .slider  .begin{text-align: center;position: relative;margin-top:10%;left:0;width:100%;}
+#home .slider  .begin .btn{position: absolute;bottom:-100%;left:0;text-align: center;width:100%;}
+
+/*information 样式*/
+#information .slider{height:350px;}
+#information .slider-slide img{width:100%;height:100%;}
+#information  .list{width:102%;}
+#information  .list .item{display:inline-block;width:33%;float:left;height:150px;position:relative;}
+#information  .list .item .item-content{height:100%;}
+#information  .list .item img{width:100%;height:100%;position: absolute;left:0;top:0;}
+#information  .list .item i{width:100%;height:100%;font-size:5em;}
+#information  .list .item-right-edit{position: absolute;right:0;top:0;width:60px;height:60px;background:transparent}
+#information  .list .item-left-edit{position: absolute;left:0;top:0;width:60px;height:60px;background:transparent}
+    /*area 样式*/
+#areas .tabs{position:absolute;top:44px;}
+#areas .tabs a{color:#acacac;}
+#areas .tabs .active{color:#fb4746;}
+#areas .wrap{padding-top:48px;}
+/*精选 样式*/
+#areas .wrap{background:#f0f0f0;}
+#areas .wrap .jinxuan .list{margin-bottom:20px;}
+#areas .wrap .jinxuan .list .row .col{text-align: center;color:#bfbfbf;}
+#areas .wrap .jinxuan .list .txt{max-height:100px;white-space:normal;}
+/*话题样式*/
+#areas .wrap .huati{}
+
+
+
+
+
+
+
+/*玩乐样式*/
+#playfun .row .col  img{width:100%;height:auto;}
+#playfun .card .item{position:relative;}
+#playfun .card .item .marsk{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.3);color:#fff;}
+#playfun .card .item .marsk span{position:absolute;width:80%;height:20%;left:0;top:0;right:0;bottom:0;margin:auto;overflow:hidden;font-size:1.5em}
+/*我的  样式*/
+#primary .denglu{height:70px;line-height:35px;}
+#primary  .tiao{background:#f0f0f0}
+#primary .lastitem{border-bottom:none;}
+
+    /*我的  样式 下面的 更多设置*/
+#moresettings .item{}
+#moresettings h3{height:20px;}
+#moresettings span{color:#ddd;font-size:12px;position:absolute;left:16px;bottom:5px;}
+#moresettings b{font-weight: normal;font-size:12px;}
+#moresettings .lastitem{border-bottom:none;}
+
